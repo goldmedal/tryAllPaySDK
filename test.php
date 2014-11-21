@@ -1,7 +1,7 @@
 <?php
 
 	include_once("sdk/AllPay.Payment.Integration.php");
-	
+	include_once("checkMacValue.php");
 	try {
 
 	$oPayment = new AllinOne();
@@ -11,11 +11,11 @@
 //	$oPayment->ServiceMethod = HttpMethod::HttpPOST;
 	$oPayment->ServiceURL= "http://payment-stage.allpay.com.tw/Cashier/AioCheckOut";
 	$oPayment->HashKey="5294y06JbISpM5x9";
-	$oPayment->HashIV="v77hoKGq4kWxNNIS ";
-	$oPayment->MerchantID="2000132 ";
+	$oPayment->HashIV="v77hoKGq4kWxNNIS";
+	$oPayment->MerchantID="2000132";
 
 	/* 基本參數 */
-	 $oPayment->Send['ReturnURL'] = "https://114.39.130.18";
+	 $oPayment->Send['ReturnURL'] = "http://114.39.130.207";
 //	 $oPayment->Send['ClientBackURL'] = "<<您要歐付寶返回按鈕導向的瀏覽器端網址>>";
 //	 $oPayment->Send['OrderResultURL'] = "<<您要收到付款完成通知的瀏覽器端網址>>";
 	 $oPayment->Send['MerchantTradeNo'] = "1";
@@ -40,6 +40,14 @@
 //	 $oPayment->SendExtend['Redeem'] = (bool)"<<是否使用紅利折抵>>";
 //	 $oPayment->SendExtend['UnionPay'] = (bool) "<<是否為聯營卡>>";
 
+	// generate CheckMacValue 
+	 /*
+	 $checkMacRow = array_merge($oPayment->SendExtend, $oPayment->Send);
+	 $checkMacRow['MerchantID'] = $oPayment->MerchantID;
+	 $checkMacValue = formatRowToCheck($checkMacRow, $oPayment->HashKey, $oPayment->HashIV);
+	 $oPayment->CheckMacValue = $checkMacValue;
+
+	*/
 		  /* 產生訂單 */
 	 $oPayment->CheckOut();
 	 /* 產生產生訂單 Html Code 的方法 */
