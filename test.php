@@ -17,8 +17,8 @@
 	/* 基本參數 */
 	 $oPayment->Send['ReturnURL'] = "http://114.39.130.207";
 //	 $oPayment->Send['ClientBackURL'] = "<<您要歐付寶返回按鈕導向的瀏覽器端網址>>";
-//	 $oPayment->Send['OrderResultURL'] = "<<您要收到付款完成通知的瀏覽器端網址>>";
-	 $oPayment->Send['MerchantTradeNo'] = "1";
+	 $oPayment->Send['OrderResultURL'] = "http://59.127.231.73";
+	 $oPayment->Send['MerchantTradeNo'] = "1453992";
 	 $oPayment->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');
 	 $oPayment->Send['TotalAmount'] = (int) 5000;
 	 $oPayment->Send['TradeDesc'] = "Test";

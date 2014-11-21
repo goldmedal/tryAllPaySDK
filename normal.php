@@ -14,10 +14,10 @@
 	$oPayment->MerchantID="2000132";
 
 	 /* 基本參數 */
-	 $oPayment->Send['ReturnURL'] = "114.39.130.207";
-	// $oPayment->Send['ClientBackURL'] = "114.39.130.207";
-	// $oPayment->Send['OrderResultURL'] = "114.39.130.207";
-	 $oPayment->Send['MerchantTradeNo'] = "1";
+	 $oPayment->Send['ReturnURL'] = "52.127.231.73";
+//	 $oPayment->Send['ClientBackURL'] = "114.39.130.207";
+//	 $oPayment->Send['OrderResultURL'] = "114.39.130.207";
+	 $oPayment->Send['MerchantTradeNo'] = "112313";
 	 $oPayment->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');
 	 $oPayment->Send['TotalAmount'] = (int) "1000";
 	 $oPayment->Send['TradeDesc'] = "<<您該筆訂單的描述>>";
@@ -26,10 +26,10 @@
 	 $oPayment->Send['ChooseSubPayment'] = PaymentMethodItem::None;
 	 $oPayment->Send['NeedExtraPaidInfo'] = ExtraPaymentInfo::No;
 	 $oPayment->Send['DeviceSource'] = DeviceType::PC;
-//	 $oPayment->Send['IgnorePayment'] = "ATM"; // 例(排除支付寶與財富通): Alipay#Tenpay
+	 $oPayment->Send['IgnorePayment'] = "ATM"; // 例(排除支付寶與財富通): Alipay#Tenpay
 	 // 加入選購商品資料。
 	 array_push($oPayment->Send['Items'], array('Name' => "<<產品A>>", 'Price' => (int)"100",
-	'Currency' => "TWD", 'Quantity' => (int) "1", 'URL' => "114.39.130.207"));
+	'Currency' => "TWD", 'Quantity' => (int) "1", 'URL' => "http://114.39.130.207"));
 	/* array_push($oPayment->Send['Items'], array('Name' => "<<產品B>>", 'Price' => (int)"<<單價>>",
 	'Currency' => "<<幣別>>", 'Quantity' => (int) "<<數量>>", 'URL' => "<<產品說明位址>>"));
 	 array_push($oPayment->Send['Items'], array('Name' => "<<產品C>>", 'Price' => (int)"<<單價>>",
