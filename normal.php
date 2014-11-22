@@ -17,7 +17,7 @@
 	 $oPayment->Send['ReturnURL'] = "52.127.231.73";
 //	 $oPayment->Send['ClientBackURL'] = "114.39.130.207";
 //	 $oPayment->Send['OrderResultURL'] = "114.39.130.207";
-	 $oPayment->Send['MerchantTradeNo'] = "112313";
+	 $oPayment->Send['MerchantTradeNo'] = "112333313";
 	 $oPayment->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');
 	 $oPayment->Send['TotalAmount'] = (int) "1000";
 	 $oPayment->Send['TradeDesc'] = "<<您該筆訂單的描述>>";
