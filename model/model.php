@@ -27,7 +27,7 @@
 			switch($this->dbType){
 
 				case "mysql" :
-					mysql_connect($server, $user, $pwd);
+					mysql_connect($server, $user, $pwd);break;
 				default:
 					die("Can't support this database");
 
@@ -40,7 +40,7 @@
 			switch($this->dbType){
 
 				case "mysql" :
-					mysql_select_db($dbName);
+					mysql_select_db($dbName);break;
 				default:
 					die("Can't support this database");
 

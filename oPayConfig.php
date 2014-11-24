@@ -5,5 +5,4 @@
 	$oPayHashIV = "v77hoKGq4kWxNNIS";
 	$oPayMerchantID = "2000132";
 
-
 ?>

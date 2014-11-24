@@ -1,9 +1,9 @@
 <?php
 
-	require_once("../sdk/AllPay.Payment.Integration.php")
-	require_once("../oPayConfig.php")
+	require_once("sdk/AllPay.Payment.Integration.php");
+	require_once("oPayConfig.php");
 
-	class view 
+	class FeedbackView 
 	{
 
 		private $arFeedback;

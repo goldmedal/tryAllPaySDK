@@ -5,14 +5,14 @@
 	class CreditPayModel extends Model
 	{
 
-		private $merchantID;
+		private $merchantTradeNum;
 		
 		public function newTradeReturnID($name, $phone, $email, $vegerarian){
 
-			$insert_sql = "INSERT INTO `credit_pay`(`name`, `phone`, `email`, `vegetarian`) VALUES($name, $phone, $email, $vegetarian)";
+			$insert_sql = "INSERT INTO `credit_pay`(`name`, `phone`, `email`, `vegetarian`) VALUES ('$name', '$phone', '$email', '$vegetarian')";
 			mysql_query($insert_sql) or die(mysql_error());
-			$this->merchantID = mysql_insert_id();
-			return $this->merchantID;
+			$this->merchantTradeNum = mysql_insert_id();
+			return $this->merchantTradeNum;
 
 		}
 
