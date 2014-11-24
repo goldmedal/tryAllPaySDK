@@ -1,6 +1,6 @@
 <?php
 
-		include_once("sdk/AllPay.Payment.Integration.php");
+	include_once("sdk/AllPay.Payment.Integration.php");
 	/*
 	* 產生訂單的範例程式碼。
 	*/
@@ -10,14 +10,14 @@
 	 /* 服務參數 */
 	 $oPayment->ServiceURL = "http://payment-stage.allpay.com.tw/Cashier/AioCheckOut";
 	 $oPayment->HashKey = "5294y06JbISpM5x9";
-	$oPayment->HashIV="v77hoKGq4kWxNNIS";
-	$oPayment->MerchantID="2000132";
+ 	 $oPayment->HashIV="v77hoKGq4kWxNNIS";
+	 $oPayment->MerchantID="2000132";
 
 	 /* 基本參數 */
 	 $oPayment->Send['ReturnURL'] = "52.127.231.73";
 //	 $oPayment->Send['ClientBackURL'] = "114.39.130.207";
 //	 $oPayment->Send['OrderResultURL'] = "114.39.130.207";
-	 $oPayment->Send['MerchantTradeNo'] = "112333313";
+	 $oPayment->Send['MerchantTradeNo'] = "AA12333313";
 	 $oPayment->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');
 	 $oPayment->Send['TotalAmount'] = (int) "1000";
 	 $oPayment->Send['TradeDesc'] = "<<您該筆訂單的描述>>";
