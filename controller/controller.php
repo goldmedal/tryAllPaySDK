@@ -65,8 +65,8 @@
 				
 				$price = 5000;
 
-				$oPayment->Send['ReturnURL'] = "http://52.127.231.73";
-				$oPayment->Send['OrderResultURL'] = "http://52.127.231.73";
+				$oPayment->Send['ReturnURL'] = "http://59.127.231.73";
+				$oPayment->Send['OrderResultURL'] = "http://59.127.231.73/git/tryAllPaySDK/result.php";
 				$oPayment->Send['MerchantTradeNo'] = $merchantTradeNum;
 				$oPayment->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');
 				$oPayment->Send['TotalAmount'] = $price;
