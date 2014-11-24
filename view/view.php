@@ -30,7 +30,7 @@
 
 			$this->arFeedback = $this->oPayment->CheckOutFeedback();
 
-			if(sizeof($this->arFeedback) < 0) echo '0|Fail';
+			if(sizeof($this->arFeedback) < 0) print '0|Fail';
 			}
 			catch (Exception $e)
 			{
@@ -68,7 +68,7 @@
 
 			}
 
-			echo '1|OK';
+			print '1|OK';
 
 		}
 
