@@ -18,6 +18,8 @@
 			global $oPayMerchantID;
 
 			// 設定服務參數
+			// 
+			try{
 
 			$this->oPayment = new AllInOne();
 			$this->oPayment->HashKey = $oPayHashKey;
@@ -28,17 +30,24 @@
 
 			$this->arFeedback = $this->oPayment->CheckOutFeedback();
 
-			if(sizeof($this->arFeedback) < 0) die("Trade Fail !");
+			if(sizeof($this->arFeedback) < 0) echo '0|Fail';
+			}
+			catch (Exception $e)
+			{
+
+				// 例外錯誤處理
+				throw $e;
+
+			}
 
 		}
 
 		public function outputResult(){
 
+
 			// get feedback information
 
 			foreach($this->arFeedback as $key => $value){
-
-				echo $key." = ".$value."<br>";
 
 				switch($key){
 					case "MerchantID": $szMerchantID = $value; break;
@@ -58,6 +67,8 @@
 				}
 
 			}
+
+			echo '1|OK';
 
 		}
 
